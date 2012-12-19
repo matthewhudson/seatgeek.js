@@ -1,4 +1,4 @@
-# API
+# seatgeek.js
 
 Common JS & Browser library for the [SeatGeek Platform API](http://platform.seatgeek.com/).
 
@@ -140,11 +140,7 @@ The SeatGeek Platform API has built–in support for affiliates.
 </table>
 
 ### Events
-
-#### Arguments 
-
 Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for accepted arguments.
-
 
 #### Events Usage
 
@@ -155,25 +151,50 @@ Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for 
     });
 
 ##### Single Event Document
-
     seatgeek.events({ id : 801255 }, function (err, event) {
       if (err) return console.log(err);
       console.log(event);
     });
 
 ### Performers
-
 Please refer to [SeatGeek Performers API](http://platform.seatgeek.com/#performers) for accepted arguments.
 
-### Venues
+#### Performers Usage
 
+##### Paginated List of All Performers
+    seatgeek.performers(function(err, performers) {
+      if (err) return console.log(err);
+      console.log(performers);
+    });
+
+##### Single Performer Document
+    seatgeek.performers({ id : 2079 }, function(err, performers) {
+      if (err) return console.log(err);
+      console.log(performers);
+    });
+    
+### Venues
 Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for accepted arguments.
 
-## Issues
+#### Venues Usage
+
+##### Paginated List of All Venues
+    seatgeek.venues(function(err, venues) {
+      if (err) return console.log(err);
+      console.log(venues);
+    });
+
+##### Single Venue Document
+    seatgeek.venues({ id : 8 }, function(err, venues) {
+      if (err) return console.log(err);
+      console.log(venues);
+    });
+
+## ISSUES
 * Currently does not support multiple id arguments in a request.
 * Browser support is broken because SeatGeek does not presently allow CORS.
 
-## TODO: 
+## TODO
 * datetime: support local vs utc, and  ISO 8601
 * multi ids in arguments
 * support for javascript chaining
