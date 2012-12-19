@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>seatgeek.js</title>
+  <link href="https://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <style type="text/css">
+      body {
+          padding: 20px;
+      }
+      pre {
+          margin-top: 10px;
+      }
+  </style>
+</head>
+<body>
+    
+  <h1>seatgeek.js</h1> 
+  <h4>Common JS &amp; Browser library for the <a href="http://platform.seatgeek.com/">SeatGeek Platform API</a>.</h4>
+  <p>The API provides two basic types of response documents: (i) a single resource response document and (ii) a bulk resource response document. The former returns a single document of the requested resource.</p>
+
+  <p>A bulk resource response document will include an array of single resource documents along with some additional meta information about the response. If no resources are found, meta information will be returned with an empty resources array..</p>
+
+
+  <h2>Usage Example</h2>
+  <p>Click run below the example to see the result. Edit the code and test it again.</p>
+
+  <h3>seatgeek.events([options], callback)</h3>
+<pre id="seatgeek-events" contenteditable>seatgeek.events(function(err, events) {
+  if (err) return console.log(err);
+  console.log(events);
+});
+</pre>
+  <div><button id="seatgeek-events-button" class="btn btn-inverse btn-small">Run</button></div>
+  <pre id="seatgeek-events-output"></pre> 
+
+
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.3/jquery.min.js"></script>
+  <script src="../../seatgeek.js"></script>
+  <script>
+      function initExample(name) {
+          $("#"+name+"-button").click(function() {
+              $("#"+name+"-output").text("");
+              try {
+                  fn = new Function("console", $("#"+name).text());
+                  fn({ log: function(arg) {
+                      for (var i = 0; i < arguments.length; i++) {
+                          var string = typeof arguments[i] === "string" ? arguments[i] : JSON.stringify(arguments[i], null, 2);
+                          $("#"+name+"-output").text($("#"+name+"-output").text() + string);
+                      }
+                  }});
+              } catch (e) {
+                  alert(e);
+              }
+          });
+      }
+      $(function() {
+          initExample("seatgeek-events");
+      });
+  </script>
+
+</body>
+</html>

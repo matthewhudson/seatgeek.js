@@ -1,0 +1,22 @@
+{
+    "name": "seatgeek",
+    "description": "A wrapper library for the SeatGeek Platform API",
+    "homepage": "https://github.com/matthewhudson/seatgeek.js",
+    "keywords": [
+        "seatgeek",
+        "api"
+    ],
+    "author": "Matthew Hudson <matt@matthewghudson.com>",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/matthewhudson/seatgeek.js.git"
+    },
+    "dependencies": {
+        "xmlhttprequest": "1.5.0"
+    },
+    "main": "seatgeek.js",
+    "version": "0.1.0",
+    "engines": {
+        "node": "*"
+    }
+}
