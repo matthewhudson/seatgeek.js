@@ -15,7 +15,7 @@ Just include the script. The `seatgeek` object is automagically added to your en
 <script src="seatgeek.js"></script>
 ```
 
-or if you're using webpipe.js with node.js
+or if you're using seatgeek.js with node.js
 
 	$ npm -g install seatgeek
 
