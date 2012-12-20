@@ -7,6 +7,24 @@ The API provides two basic types of response documents: (i) a single resource re
 
 A bulk resource response document will include an array of single resource documents along with some additional meta information about the response. If no resources are found, meta information will be returned with an empty resources array.
 
+## Installation
+
+Just include the script. The `seatgeek` object is automagically added to your environment. No need for `new` or any other sort of initialization. In the browser do the following:
+
+``` html
+<script src="seatgeek.js"></script>
+```
+
+or if you're using webpipe.js with node.js
+
+	$ npm -g install seatgeek
+
+Then require the "seatgeek" module:
+
+``` javascript
+var seatgeek = require("seatgeek");
+```
+
 ### Events
 Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for accepted arguments.
 
