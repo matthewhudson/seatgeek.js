@@ -28,10 +28,11 @@
 
   <h2>Usage Example</h2>
   <p>Click run below the example to see the result. Edit the code and test it again.</p>
+  
+  <p>Please note that the browser-version of the library relies on JSONP and therefore does not return 'err' in any callbacks - you only get the server response.</p>
 
   <h3>seatgeek.events([options], callback)</h3>
-<pre id="seatgeek-events" contenteditable>seatgeek.events(function(err, events) {
-  if (err) return console.log(err);
+<pre id="seatgeek-events" contenteditable>seatgeek.events(function(events) {
   console.log(events);
 });
 </pre>

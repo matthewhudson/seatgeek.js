@@ -1,6 +1,9 @@
 root = exports ? (this.seatgeek = {})
 
-_format = 'json'
+_format = 'json' 
+
+# Handles user-defined callbacks when using jsonp
+root.callback = null
 
 root.events = (options, callback) ->
   _request '/events/', options, callback
@@ -10,20 +13,34 @@ root.performers = (options, callback) ->
   
 root.venues = (options, callback) ->
   _request '/venues/', options, callback
-  
+
 _request = (resource, options, callback) ->
   if typeof options is "function"
     callback = options
-    options = null
+    options = {}
 
   # Determine response body format (json|jsonp|xml)
   _format = options?.format ? 'json'
   if options?.callback
     _format = 'jsonp'
 
+  # Force jsonp if using in browser.
+  if not exports?
+    options.callback = 'seatgeek.callback'
+    root.callback = callback
+  
+  # Construct the URL
   url = _endpoint resource, options
-  _xhr url, (err, res) =>
-    callback err, res
+  
+  # Make the API request
+  if not exports?
+    script = document.createElement 'script'
+    script.type = 'text/javascript'
+    script.src = url
+    document.body.appendChild script 
+  else
+    _xhr url, (err, res) =>
+      callback err, res
 
 _xhr = (url, callback) ->
   if ActiveXObject?

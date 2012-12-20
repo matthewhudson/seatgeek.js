@@ -6,6 +6,8 @@
 
   _format = 'json';
 
+  root.callback = null;
+
   root.events = function(options, callback) {
     return _request('/events/', options, callback);
   };
@@ -19,20 +21,31 @@
   };
 
   _request = function(resource, options, callback) {
-    var url, _ref,
+    var script, url, _ref,
       _this = this;
     if (typeof options === "function") {
       callback = options;
-      options = null;
+      options = {};
     }
     _format = (_ref = options != null ? options.format : void 0) != null ? _ref : 'json';
     if (options != null ? options.callback : void 0) {
       _format = 'jsonp';
     }
+    if (!(typeof exports !== "undefined" && exports !== null)) {
+      options.callback = 'seatgeek.callback';
+      root.callback = callback;
+    }
     url = _endpoint(resource, options);
-    return _xhr(url, function(err, res) {
-      return callback(err, res);
-    });
+    if (!(typeof exports !== "undefined" && exports !== null)) {
+      script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = url;
+      return document.body.appendChild(script);
+    } else {
+      return _xhr(url, function(err, res) {
+        return callback(err, res);
+      });
+    }
   };
 
   _xhr = function(url, callback) {
