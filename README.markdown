@@ -54,9 +54,9 @@ Please refer to [SeatGeek Performers API](http://platform.seatgeek.com/#performe
     });
 
 ##### Single Performer Document
-    seatgeek.performers({ id : 2079 }, function(err, performers) {
+    seatgeek.performers({ id : 2079 }, function(err, performer) {
       if (err) return console.log(err);
-      console.log(performers);
+      console.log(performer);
     });
     
 ### Venues
@@ -71,7 +71,7 @@ Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for 
     });
 
 ##### Single Venue Document
-    seatgeek.venues({ id : 8 }, function(err, venues) {
+    seatgeek.venues({ id : 8 }, function(err, venue) {
       if (err) return console.log(err);
       console.log(venues);
     });
