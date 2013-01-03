@@ -81,9 +81,6 @@ The SeatGeek API (and seatgeek.js) supports sorting, pagination, geolocation, fi
 
 Please refer to the [SeatGeek Platform API](http://platform.seatgeek.com/) documentation for accepted arguments.
 
-## ISSUES
-* Currently does not support multiple id arguments in a request.
-
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
 * support for javascript chaining
