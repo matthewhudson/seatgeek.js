@@ -69,20 +69,17 @@ _xhr = (url, callback) ->
 
   req.open 'GET', url, true
   req.send null 
- 
+    
 # Build the endpoint URL by combining the base url, resource, and query string.
-_endpoint = (resource, options) ->
+_endpoint = (resource, params) ->
   url = 'http://api.seatgeek.com/2'
-
-  # Convert high-level library options to low-level SG params.
-  params = options
-  
+    
   # Build the query string.
   query_string = []
   for key, value of params
-    key = encodeURIComponent key 
+    key = encodeURIComponent key
     value = encodeURIComponent value 
-    query_string.push(key + '=' + value)
-  
+    query_string.push key + '=' + value
+
   return url + resource + '?' + query_string.join '&' 
 

@@ -85,10 +85,9 @@
     return req.send(null);
   };
 
-  _endpoint = function(resource, options) {
-    var key, params, query_string, url, value;
+  _endpoint = function(resource, params) {
+    var key, query_string, url, value;
     url = 'http://api.seatgeek.com/2';
-    params = options;
     query_string = [];
     for (key in params) {
       value = params[key];

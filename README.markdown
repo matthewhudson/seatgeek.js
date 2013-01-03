@@ -86,7 +86,6 @@ Please refer to the [SeatGeek Platform API](http://platform.seatgeek.com/) docum
 
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
-* multi ids in arguments
 * support for javascript chaining
 
   
