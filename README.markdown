@@ -2,11 +2,6 @@
 
 Common JS & Browser library for the [SeatGeek Platform API](http://platform.seatgeek.com/).
 
-## Response Formats
-The API provides two basic types of response documents: (i) a single resource response document and (ii) a bulk resource response document. The former returns a single document of the requested resource.
-
-A bulk resource response document will include an array of single resource documents along with some additional meta information about the response. If no resources are found, meta information will be returned with an empty resources array.
-
 ## Installation
 
 Just include the script. The `seatgeek` object is automagically added to your environment. No need for `new` or any other sort of initialization. In the browser do the following:
@@ -24,6 +19,16 @@ Then require the "seatgeek" module:
 ``` javascript
 var seatgeek = require("seatgeek");
 ```
+
+## Usage
+The SeatGeek API (and seatgeek.js) supports sorting, pagination, geolocation, filtering, and affiliates. 
+
+Please refer to the [SeatGeek Platform API](http://platform.seatgeek.com/) documentation for accepted arguments.
+
+#### Response Formats
+The API provides two basic types of response documents: (i) a single resource response document and (ii) a bulk resource response document. The former returns a single document of the requested resource.
+
+A bulk resource response document will include an array of single resource documents along with some additional meta information about the response. If no resources are found, meta information will be returned with an empty resources array.
 
 ### Events
 Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for accepted arguments.
@@ -76,13 +81,6 @@ Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for 
       console.log(venues);
     });
 
-### API Features
-The SeatGeek API (and seatgeek.js) supports sorting, pagination, geolocation, filtering, and affiliates. 
-
-Please refer to the [SeatGeek Platform API](http://platform.seatgeek.com/) documentation for accepted arguments.
-
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
 * support for javascript chaining
-
-  
