@@ -19,6 +19,9 @@ _request = (resource, options, callback) ->
     callback = options
     options = {}
 
+  # Determine response body format (json|xml)
+  _format = options?.format ? 'json'
+  
   # Force jsonp if using in browser.
   if not exports?
     options.callback = 'seatgeek.callback'
@@ -41,7 +44,10 @@ _request = (resource, options, callback) ->
       res.on 'data', (chunk) ->
         body += chunk
       res.on 'end', ->
-        callback null, body
+        if _format is 'json'
+          callback null, JSON.parse body
+        else
+          callback null, body
     req.on 'error', (err) ->
       callback err, null
 
