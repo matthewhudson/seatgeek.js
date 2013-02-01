@@ -7,6 +7,7 @@
         "api"
     ],
     "author": "Matthew Hudson <matt@matthewghudson.com>",
+    "bugs": "https://github.com/matthewhudson/seatgeek.js/issues",
     "repository": {
         "type": "git",
         "url": "git://github.com/matthewhudson/seatgeek.js.git"
