@@ -17,5 +17,8 @@
     "license": "MIT",
     "engines": {
         "node": "*"
+    },
+    "scripts": {
+        "test": "node test/suite.js"
     }
 }
