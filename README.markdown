@@ -2,6 +2,8 @@
 
 Common JS & Browser library for the [SeatGeek Platform API](http://platform.seatgeek.com/).
 
+[![Build Status](https://travis-ci.org/matthewhudson/seatgeek.js.png?branch=master)](https://travis-ci.org/matthewhudson/seatgeek.js)
+
 ## Installation
 
 Just include the script. The `seatgeek` object is automagically added to your environment. No need for `new` or any other sort of initialization. In the browser do the following:
@@ -84,3 +86,6 @@ Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for 
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
 * support for javascript chaining
+* handle paging, multi-ids as well
+
+
