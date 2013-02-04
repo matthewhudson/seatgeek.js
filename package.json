@@ -16,7 +16,7 @@
     "version": "0.3.6",
     "license": "MIT",
     "engines": {
-        "node": "*"
+        "node": "0.8.17"
     },
     "scripts": {
         "test": "node test/suite.js"

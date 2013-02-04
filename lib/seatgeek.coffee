@@ -14,6 +14,9 @@ root.performers = (options, callback) ->
 root.venues = (options, callback) ->
   _request '/venues/', options, callback
 
+root.taxonomies = (options, callback) ->
+  _request '/taxonomies/', options, callback
+
 _request = (resource, options, callback) ->
   if typeof options is "function"
     callback = options
