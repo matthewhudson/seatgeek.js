@@ -1,4 +1,4 @@
-var seatgeek = require('../../seatgeek');
+var seatgeek = require('../../');
 
 seatgeek.venues(function(err, venues) {
   if (err) return console.log(err);
