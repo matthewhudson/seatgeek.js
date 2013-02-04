@@ -83,6 +83,18 @@ Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for 
       console.log(venues);
     });
 
+### Taxonomies
+Please refer to [SeatGeek Taxonomies API](http://platform.seatgeek.com/#taxonomies) for accepted arguments.
+
+#### Taxonomies Usage
+
+##### Retrieve All Taxonomies
+    seatgeek.taxonomies(function(err, taxonomies) {
+      if (err) return console.log(err);
+      console.log(taxonomies);
+    });
+
+
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
 * support for javascript chaining
