@@ -13,12 +13,15 @@
         "url": "git://github.com/matthewhudson/seatgeek.js.git"
     },
     "main": "index",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "license": "MIT",
     "engines": {
         "node": "*"
     },
     "scripts": {
         "test": "node test/suite.js"
+    },
+    "devDependencies": {
+        "vows": "0.7.0"
     }
 }
