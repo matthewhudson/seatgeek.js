@@ -1,2 +1,4 @@
-node_modules
-*.bak
+.DS_Store
+/node_modules/
+/test/
+/npm-debug.log
