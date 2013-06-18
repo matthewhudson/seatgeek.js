@@ -14,7 +14,9 @@ Just include the script. The `seatgeek` object is automagically added to your en
 
 or if you're using seatgeek.js with node.js
 
+``` sh
 	$ npm -g install seatgeek
+```
 
 Then require the "seatgeek" module:
 
@@ -39,18 +41,18 @@ Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for 
 
 ##### Paginated List of All Events
 ```js
-    seatgeek.events(function(err, events) {
-      if (err) return console.log(err);
-      console.log(events);
-    });
+seatgeek.events(function(err, events) {
+  if (err) return console.log(err);
+  console.log(events);
+});
 ```
 
 ##### Single Event Document
 ```js
-    seatgeek.events({ id : 801255 }, function (err, event) {
-      if (err) return console.log(err);
-      console.log(event);
-    });
+seatgeek.events({ id : 801255 }, function (err, event) {
+  if (err) return console.log(err);
+  console.log(event);
+});
 ```
 
 ### Performers
@@ -60,18 +62,18 @@ Please refer to [SeatGeek Performers API](http://platform.seatgeek.com/#performe
 
 ##### Paginated List of All Performers
 ```js
-    seatgeek.performers(function(err, performers) {
-      if (err) return console.log(err);
-      console.log(performers);
-    });
+seatgeek.performers(function(err, performers) {
+  if (err) return console.log(err);
+  console.log(performers);
+});
 ```
 
 ##### Single Performer Document
 ```js
-    seatgeek.performers({ id : 2079 }, function(err, performer) {
-      if (err) return console.log(err);
-      console.log(performer);
-    });
+seatgeek.performers({ id : 2079 }, function(err, performer) {
+  if (err) return console.log(err);
+  console.log(performer);
+});
 ```
 
 ### Venues
@@ -81,18 +83,18 @@ Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for 
 
 ##### Paginated List of All Venues
 ```js
-    seatgeek.venues(function(err, venues) {
-      if (err) return console.log(err);
-      console.log(venues);
-    });
+seatgeek.venues(function(err, venues) {
+  if (err) return console.log(err);
+  console.log(venues);
+});
 ```
 
 ##### Single Venue Document
 ```js
-    seatgeek.venues({ id : 8 }, function(err, venue) {
-      if (err) return console.log(err);
-      console.log(venues);
-    });
+  seatgeek.venues({ id : 8 }, function(err, venue) {
+    if (err) return console.log(err);
+    console.log(venues);
+  });
 ```
 
 ### Taxonomies
@@ -102,10 +104,10 @@ Please refer to [SeatGeek Taxonomies API](http://platform.seatgeek.com/#taxonomi
 
 ##### Retrieve All Taxonomies
 ```js
-    seatgeek.taxonomies(function(err, taxonomies) {
-      if (err) return console.log(err);
-      console.log(taxonomies);
-    });
+seatgeek.taxonomies(function(err, taxonomies) {
+  if (err) return console.log(err);
+  console.log(taxonomies);
+});
 ```
 
 ## TODO
