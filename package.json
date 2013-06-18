@@ -13,7 +13,7 @@
         "url": "git://github.com/matthewhudson/seatgeek.js.git"
     },
     "main": "index",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "license": "MIT",
     "engines": {
         "node": "0.8.17"
@@ -22,6 +22,10 @@
         "test": "node test/suite.js"
     },
     "devDependencies": {
-        "vows": "0.7.0"
+        "vows": "0.7.0",
+        "grunt": "latest",
+        "grunt-contrib-uglify": "0.2.2",
+        "grunt-contrib-coffee": "~0.7.0",
+        "grunt-bumpup": "~0.2.0"
     }
 }
