@@ -38,16 +38,20 @@ Please refer to [SeatGeek Events API](http://platform.seatgeek.com/#events) for 
 #### Events Usage
 
 ##### Paginated List of All Events
+```js
     seatgeek.events(function(err, events) {
       if (err) return console.log(err);
       console.log(events);
     });
+```
 
 ##### Single Event Document
+```js
     seatgeek.events({ id : 801255 }, function (err, event) {
       if (err) return console.log(err);
       console.log(event);
     });
+```
 
 ### Performers
 Please refer to [SeatGeek Performers API](http://platform.seatgeek.com/#performers) for accepted arguments.
@@ -55,33 +59,41 @@ Please refer to [SeatGeek Performers API](http://platform.seatgeek.com/#performe
 #### Performers Usage
 
 ##### Paginated List of All Performers
+```js
     seatgeek.performers(function(err, performers) {
       if (err) return console.log(err);
       console.log(performers);
     });
+```
 
 ##### Single Performer Document
+```js
     seatgeek.performers({ id : 2079 }, function(err, performer) {
       if (err) return console.log(err);
       console.log(performer);
     });
-    
+```
+
 ### Venues
 Please refer to [SeatGeek Venues API](http://platform.seatgeek.com/#venues) for accepted arguments.
 
 #### Venues Usage
 
 ##### Paginated List of All Venues
+```js
     seatgeek.venues(function(err, venues) {
       if (err) return console.log(err);
       console.log(venues);
     });
+```
 
 ##### Single Venue Document
+```js
     seatgeek.venues({ id : 8 }, function(err, venue) {
       if (err) return console.log(err);
       console.log(venues);
     });
+```
 
 ### Taxonomies
 Please refer to [SeatGeek Taxonomies API](http://platform.seatgeek.com/#taxonomies) for accepted arguments.
@@ -89,11 +101,12 @@ Please refer to [SeatGeek Taxonomies API](http://platform.seatgeek.com/#taxonomi
 #### Taxonomies Usage
 
 ##### Retrieve All Taxonomies
+```js
     seatgeek.taxonomies(function(err, taxonomies) {
       if (err) return console.log(err);
       console.log(taxonomies);
     });
-
+```
 
 ## TODO
 * datetime: support local vs utc, and  ISO 8601
