@@ -15,7 +15,7 @@ Just include the script. The `seatgeek` object is automagically added to your en
 or if you're using seatgeek.js with node.js
 
 ``` sh
-	$ npm -g install seatgeek
+$ npm -g install seatgeek
 ```
 
 Then require the "seatgeek" module:
@@ -91,10 +91,10 @@ seatgeek.venues(function(err, venues) {
 
 ##### Single Venue Document
 ```js
-  seatgeek.venues({ id : 8 }, function(err, venue) {
-    if (err) return console.log(err);
-    console.log(venues);
-  });
+seatgeek.venues({ id : 8 }, function(err, venue) {
+  if (err) return console.log(err);
+  console.log(venues);
+});
 ```
 
 ### Taxonomies
