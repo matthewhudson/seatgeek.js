@@ -1,5 +1,5 @@
 var vows = require('vows');
-var http = require('http');
+var request = require('request');
 var assert = require('assert');
 var seatgeek = require('../');
 
@@ -36,25 +36,19 @@ function hasSpecificNumberOfResourcesInResponseDocument (resource, count) {
 }
 
 function seedRandomEventIds (callback) {
-  var endpoint = 'http://api.seatgeek.com/2/events?sort=score.desc';
-  var request = http.get(endpoint, function (response) {
-    var body = '';
-    response.on('data', function (chunk) {
-      body += chunk;
-    });
-    response.on('end', function () {
-      json = JSON.parse(body);
-      if (!json.hasOwnProperty('events')) {
-        exit("Failed to seed the EVENT_IDS necessary to run tests.");
-      }
-      for (var key in json['events']) {
-        EVENT_IDS.push(json['events'][key]['id']);
-      }
-      callback();
-    });
-  });
-  request.on('error', function (err) {
-    exit(err);
+  var endpoint = 'https://api.seatgeek.com/2/events?sort=score.desc';
+  request.get(endpoint, function (error, response, body) {
+    if (error) {
+      exit(error);
+    }
+    json = JSON.parse(body);
+    if (!json.hasOwnProperty('events')) {
+      exit("Failed to seed the EVENT_IDS necessary to run tests.");
+    }
+    for (var key in json['events']) {
+      EVENT_IDS.push(json['events'][key]['id']);
+    }
+    callback();
   });
 }
 

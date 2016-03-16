@@ -1,31 +1,35 @@
 {
-    "name": "seatgeek",
-    "description": "A wrapper library for the SeatGeek Platform API",
-    "homepage": "https://github.com/matthewhudson/seatgeek.js",
-    "keywords": [
-        "seatgeek",
-        "api"
-    ],
-    "author": "Matthew Hudson <matt@matthewghudson.com>",
-    "bugs": "https://github.com/matthewhudson/seatgeek.js/issues",
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/matthewhudson/seatgeek.js.git"
-    },
-    "main": "index",
-    "version": "0.3.8",
-    "license": "MIT",
-    "engines": {
-        "node": "0.8.17"
-    },
-    "scripts": {
-        "test": "node test/suite.js"
-    },
-    "devDependencies": {
-        "vows": "0.7.0",
-        "grunt": "latest",
-        "grunt-contrib-uglify": "0.2.2",
-        "grunt-contrib-coffee": "~0.7.0",
-        "grunt-bumpup": "~0.2.0"
-    }
+  "name": "seatgeek",
+  "description": "A wrapper library for the SeatGeek Platform API",
+  "homepage": "https://github.com/matthewhudson/seatgeek.js",
+  "keywords": [
+    "seatgeek",
+    "api"
+  ],
+  "author": "Matthew Hudson <matt@matthewghudson.com>",
+  "bugs": "https://github.com/matthewhudson/seatgeek.js/issues",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/matthewhudson/seatgeek.js.git"
+  },
+  "main": "index",
+  "version": "0.3.8",
+  "license": "MIT",
+  "engines": {
+    "node": "0.8.17"
+  },
+  "scripts": {
+    "test": "node test/suite.js"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-bumpup": "~0.2.0",
+    "grunt-cli": "~0.1.13",
+    "grunt-contrib-coffee": "~0.7.0",
+    "grunt-contrib-uglify": "0.2.2",
+    "vows": "0.7.0"
+  },
+  "dependencies": {
+    "request": "~2.69.0"
+  }
 }
